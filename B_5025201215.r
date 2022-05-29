@@ -40,6 +40,27 @@ zstastistik =( (xbar - mu) / (standardev / sqrt(n)))
 pvalue = pnorm(-abs(zstastistik))
 pvalue
 
+#NO 3
+significantlevel = 0.05
+nBandung = 19
+nBali = 27
+meanBandung = 3.64
+meanBali = 2.79
+sdBandung = 1.67
+sdBali = 1.32
+
+SP2 = ((nBandung-1)*sdBandung*sdBandung + (nBali-1)*sdBali*sdBali)/ (nBandung+nBali-2)
+tstatistik = (meanBandung-meanBali - 0)/(sqrt(SP2*(1/nBandung + 1/nBali)))
+
+t = qt(p=significantlevel, df=2, lower.tail=TRUE)
+batasAtas = (meanBandung - meanBali) - t*(sqrt(SP2*(1/nBandung + 1/nBali)))
+batasBawah = (meanBandung - meanBali) + t*(sqrt(SP2*(1/nBandung + 1/nBali)))
+batasAtas
+batasBawah
+
+
+
+
 
 
 
