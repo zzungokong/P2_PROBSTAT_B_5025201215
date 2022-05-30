@@ -58,6 +58,28 @@ batasBawah = (meanBandung - meanBali) + t*(sqrt(SP2*(1/nBandung + 1/nBali)))
 batasAtas
 batasBawah
 
+# No4
+library(BSDA)
+my_data <- read.delim('https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt')
+df = data.frame(my_data)
+
+data1 = df[df$Group == "1",]
+data1
+
+qqnorm(data1$Length, pch = 1, frame = FALSE)
+qqline(data1$Length, col = "steelblue", lwd = 2)
+
+data2 = df[df$Group == "2",]
+
+qqnorm(data2$Length, pch = 1, frame = FALSE)
+qqline(data2$Length, col = "steelblue", lwd = 2)
+
+data3 = df[df$Group == "3",]
+
+qqnorm(data3$Length, pch = 1, frame = FALSE)
+qqline(data3$Length, col = "steelblue", lwd = 2)
+
+
 
 
 
